@@ -41,6 +41,12 @@ npm run build:pdf -- README.md --no-footer
 
 # 指定浏览器路径
 npm run build:pdf -- README.md --executable-path "C:/Program Files/Google/Chrome/Application/chrome.exe"
+
+# 便捷脚本
+npm run build:readme      # 生成 README.pdf
+npm run build:example     # 生成 examples/sample.pdf（带自定义样式）
+npm run clean             # 删除示例 PDF
+npm test                  # 运行单元测试
 ```
 
 ## 项目结构

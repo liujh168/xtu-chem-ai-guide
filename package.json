@@ -4,7 +4,12 @@
   "description": "Markdown to PDF builder (supports Chinese typography and custom CSS)",
   "private": true,
   "scripts": {
-    "build:pdf": "node build-pdf.js"
+    "build:pdf": "node build-pdf.js",
+    "build": "npm run build:readme",
+    "build:readme": "node build-pdf.js README.md",
+    "build:example": "node build-pdf.js examples/sample.md examples/sample.pdf --css examples/custom.css",
+    "clean": "node -e \"require('fs').rmSync('examples/sample.pdf', { force: true })\"",
+    "test": "node tests/args.test.js"
   },
   "devDependencies": {
     "md-to-pdf": "^5.2.5"
