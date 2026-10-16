@@ -1,0 +1,12 @@
+{
+  "name": "xtu-chem-ai-guide",
+  "version": "1.0.0",
+  "description": "Markdown to PDF builder (supports Chinese typography and custom CSS)",
+  "private": true,
+  "scripts": {
+    "build:pdf": "node build-pdf.js"
+  },
+  "devDependencies": {
+    "md-to-pdf": "^5.2.5"
+  }
+}
