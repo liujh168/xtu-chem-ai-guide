@@ -48,10 +48,18 @@ npm run build:pdf -- README.md --executable-path "C:/Program Files/Google/Chrome
 ```text
 .
 ├── build-pdf.css      # 默认中文排版样式
-├── build-pdf.js       # 主脚本：参数解析 + PDF 生成
+├── build-pdf.js       # 入口脚本
+├── src/               # 核心逻辑模块
+│   ├── args.js        # 参数解析与校验
+│   ├── browser.js     # 浏览器自动发现
+│   ├── css.js         # CSS 加载
+│   ├── main.js        # 主流程编排
+│   ├── paths.js       # 路径常量
+│   └── pdf.js         # PDF 生成与校验
+├── examples/          # 示例文档与自定义样式
+├── docs/              # 原理说明文档
 ├── package.json       # 项目配置与 npm 脚本
-├── README.md          # 本说明文档
-└── README.pdf         # 由本工具生成的示例 PDF
+└── README.md          # 本说明文档
 ```
 
 ## 命令行参数
@@ -65,6 +73,15 @@ npm run build:pdf -- README.md --executable-path "C:/Program Files/Google/Chrome
 | `--basedir <目录>` | - | 本地资源基础目录（默认当前目录） |
 | `--no-footer` | - | 关闭页脚页码 |
 | `--help` | `-h` | 显示帮助信息 |
+
+## 示例
+
+```bash
+# 使用示例文档和自定义主题生成 PDF
+npm run build:pdf -- examples/sample.md examples/sample.pdf --css examples/custom.css
+```
+
+更多示例见 `examples/` 目录，架构说明见 `docs/how-it-works.md`。
 
 ## 自定义样式
 

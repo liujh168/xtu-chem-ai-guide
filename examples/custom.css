@@ -1,0 +1,28 @@
+/* 示例：自定义 PDF 主题
+ * 使用方式：npm run build:pdf -- examples/sample.md examples/sample.pdf --css examples/custom.css
+ */
+
+body {
+  color: #333;
+}
+
+h1 {
+  color: #1a5276;
+  border-bottom-color: #1a5276;
+}
+
+h2 {
+  color: #2874a6;
+  border-bottom-color: #85c1e9;
+}
+
+code {
+  color: #c0392b;
+  background-color: #fdf2e9;
+}
+
+blockquote {
+  border-left-color: #1a5276;
+  background-color: #eaf2f8;
+  padding: 0.5em 1em;
+}
